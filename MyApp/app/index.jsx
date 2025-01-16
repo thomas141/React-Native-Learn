@@ -18,10 +18,10 @@ const app = () => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text>Coffee Shop</Text>
-        <Link href="/explore" style={styles.link} asChild>
-          <Pressable>
-            <Text style={styles.text}>Explore</Text>
+        <Text style={styles.text}>Coffee Shop</Text>
+        <Link href="/contact" style={styles.link} asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttontext}>Contact</Text>
           </Pressable>
         </Link>
       </ImageBackground>
@@ -49,6 +49,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  buttontext: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  button: {
+    height: 50,
+    borderRadius: 10,
+    padding: 10,
+    justifyContent: "center",
   },
   link: {
     color: "white",

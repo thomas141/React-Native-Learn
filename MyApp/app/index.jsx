@@ -1,7 +1,14 @@
 //rnfes
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Pressable,
+} from "react-native";
 //import React from "react";
 import icedCoffeeImg from "@/assets/images/iced-coffee.png";
+import { Link } from "expo-router";
 
 const app = () => {
   return (
@@ -11,7 +18,12 @@ const app = () => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text style={styles.text}>Coffee Shop</Text>
+        <Text>Coffee Shop</Text>
+        <Link href="/explore" style={styles.link} asChild>
+          <Pressable>
+            <Text style={styles.text}>Explore</Text>
+          </Pressable>
+        </Link>
       </ImageBackground>
     </View>
   );
@@ -32,9 +44,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    color: "red",
+    color: "white",
     fontSize: 42,
     fontWeight: "bold",
     textAlign: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  link: {
+    color: "white",
+    fontSize: 42,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
   },
 });
